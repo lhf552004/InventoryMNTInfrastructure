@@ -3,8 +3,8 @@ provider "aws" {
 }
 
 module "ecr" {
-  source    = "./modules/ecr"
-  ecr_name  = var.ecr_name
+  source   = "./modules/ecr"
+  ecr_name = var.ecr_name
   ecr_policy = jsonencode({
     "Version" : "2012-10-17",
     "Statement" : [
@@ -24,8 +24,8 @@ module "ecr" {
 }
 
 module "iam" {
-  source            = "./modules/iam"
-  lambda_role_name  = var.lambda_role_name
+  source           = "./modules/iam"
+  lambda_role_name = var.lambda_role_name
   assume_role_policy = jsonencode({
     "Version" : "2012-10-17",
     "Statement" : [
@@ -55,6 +55,6 @@ module "iam" {
 }
 
 module "api_gateway" {
-  source            = "./modules/api_gateway"
-  api_gateway_name  = var.api_gateway_name
+  source           = "./modules/api_gateway"
+  api_gateway_name = var.api_gateway_name
 }
