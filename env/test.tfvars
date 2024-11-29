@@ -1,4 +1,4 @@
-resource_group_name = "terraform-test-rg"
-app_service_name    = "test-app-service"
-app_service_plan    = "S1"
-environment         = "testing"
+aws_region           = "us-west-2"
+ecr_name             = "dotnet-api"
+lambda_role_name     = "apilambdarole"
+api_gateway_name     = "inventory-management-api"
